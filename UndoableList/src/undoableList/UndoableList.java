@@ -5,12 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
-/*
-You may ask why i have different class for every undo action, instead of just keeping track of list history.
-The reason is that if you keep track of the list history, you have to keep too many lists in-memory (separate list for every list modification)
-if we have huge dataset with many modifications, it won't be good solution. There are still couple undo actions like
-undoableList.UndoClearAction, undoableList.UndoAddAllAction etc., that are very memory-expensive, because we store whole sub-lists.
- */
 public class UndoableList<T> {
 
     private List<T> list;
